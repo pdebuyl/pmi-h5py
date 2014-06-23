@@ -1,3 +1,10 @@
+# Copyright 2014 Pierre de Buyl
+#
+# This file is part of pmi-h5py
+#
+# pmi-h5py is free software and is licensed under the modified BSD license (see
+# LICENSE file).
+
 import pmi
 from mpi4py import MPI
 pmi.exec_('import test_pmi_mod')
