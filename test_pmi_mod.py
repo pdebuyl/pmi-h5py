@@ -10,8 +10,6 @@ class MyTestLocal(object):
         self.f = h5py.File('myllfile.h5', 'w', driver='mpio', comm=MPI.COMM_WORLD)
         self.n = n
         self.data = np.random.random(n)
-    def do(self):
-        print MPI.COMM_WORLD.rank, self.filename
     def show(self):
         print MPI.COMM_WORLD.rank, self.data
     def fill(self):
@@ -24,4 +22,4 @@ class MyTestLocal(object):
 
 class MyTest(object):
     __metaclass__ = pmi.Proxy
-    pmiproxydefs = {'cls': 'test_pmi_mod.MyTestLocal', 'pmicall': [ 'do', 'show', 'close', 'fill' ]}
+    pmiproxydefs = {'cls': 'test_pmi_mod.MyTestLocal', 'pmicall': [ 'show', 'close', 'fill' ]}
