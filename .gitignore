@@ -1,0 +1,13 @@
+*~
+*.o
+*.py[ocd]
+*.a
+.DS_Store?
+*.h5
+
+/build
+/dist
+/doc/build
+/doc/html
+
+MANIFEST
