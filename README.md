@@ -19,6 +19,7 @@ pmi-h5py requires
 - pmi https://github.com/olenz/pmi
 - h5py http://www.h5py.org/ compiled with parallel support
 
-This code is tested with HDF5 1.8.13 and h5py's development version, using
-OpenMPI 1.8.1
+This code is tested with:
+- HDF5 1.8.13 and h5py's development version, using OpenMPI 1.8.1
+- HDF5 1.8.12 and h5py 2.4.0a0, using OpenMPI 1.6.5
 
