@@ -20,7 +20,8 @@ class MyTestLocal(object):
     def fill(self):
         self.f.create_dataset('ds1',
                               dtype=self.data.dtype,
-                              shape=(MPI.COMM_WORLD.size*self.n,))
+                              shape=(MPI.COMM_WORLD.size*self.n,),
+                              chunks=(self.n,))
         idx_0 = MPI.COMM_WORLD.rank*self.n
         idx_1 = idx_0+self.n
         self.f['ds1'][idx_0:idx_1] = self.data
