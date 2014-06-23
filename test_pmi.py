@@ -2,8 +2,8 @@ import pmi
 from mpi4py import MPI
 import test_pmi_mod
 
-hop = test_pmi_mod.MyTest('hey hey', 5)
+mytest = test_pmi_mod.MyTest('myllfile.h5', 5)
 
-hop.show()
-hop.fill()
-hop.close()
+mytest.show()
+mytest.fill()
+mytest.close()

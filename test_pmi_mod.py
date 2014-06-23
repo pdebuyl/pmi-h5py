@@ -9,7 +9,7 @@ class MyTestLocal(object):
     def __init__(self, filename, n):
         self.filename = filename
         self.f = h5py.File(
-            'myllfile.h5', 'w',
+            self.filename, 'w',
             driver='mpio', comm=MPI.COMM_WORLD)
         self.n = n
         self.data = np.random.random(n)
